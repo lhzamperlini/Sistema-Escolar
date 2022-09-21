@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "4UoIbjWtfDTsOeUh0LKM90PujNMTMQqf+Wq8XQTDA+Pp6c3aQLyH8hYxxOlrEJJG95wU0Dv9sHQV5M949q9sMQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Fabricio two\\source\\repos\\Sistema-Escolarrr\\Sistema-Escolarrr.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Fabricio two\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Fabricio two\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
+    "C:\\Users\\Fabricio two\\.nuget\\packages\\swashbuckle.aspnetcore\\5.0.0\\swashbuckle.aspnetcore.5.0.0.nupkg.sha512",
+    "C:\\Users\\Fabricio two\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.5.0\\swashbuckle.aspnetcore.swagger.5.5.0.nupkg.sha512",
+    "C:\\Users\\Fabricio two\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.0.0\\swashbuckle.aspnetcore.swaggergen.5.0.0.nupkg.sha512",
+    "C:\\Users\\Fabricio two\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.0.0\\swashbuckle.aspnetcore.swaggerui.5.0.0.nupkg.sha512",
+    "C:\\Users\\Fabricio two\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}
