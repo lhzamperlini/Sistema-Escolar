@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Sistema_Escolarrr
+namespace Sistema_Escolar
 {
     public class Program
     {
