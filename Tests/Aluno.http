@@ -1,0 +1,30 @@
+### Listar os alunos
+GET https://localhost:5001/api/aluno/listar
+
+### Cadastrar um aluno
+POST https://localhost:5001/api/aluno/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "NomeTeste",
+    "cpf" : "12312312312",
+    "email" : "email@teste",
+    "rgm" : "1000",
+    "nascimento" : "1900-09-20"
+}
+
+### Buscar um aluno pelo CPF
+GET https://localhost:5001/api/aluno/buscar/1234567891
+
+### Deletar um aluno pelo Id
+DELETE https://localhost:5001/api/aluno/deletar/1
+
+### Alterar um aluno
+PATCH  https://localhost:5001/api/aluno/alterar
+Content-Type: application/json
+
+{
+    "id" : 2,
+    "nome" : "NomeAlteradoTeste",
+    "cpf" : "12345678911"
+}

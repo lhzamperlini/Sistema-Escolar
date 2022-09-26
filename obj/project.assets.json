@@ -5,7 +5,7 @@
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Humanizer.dll": {}
+          "lib/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {}
@@ -86,7 +86,7 @@
           "Microsoft.EntityFrameworkCore.Relational": "5.0.17"
         },
         "compile": {
-          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {}
+          "lib/netstandard2.1/_._": {}
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {}
@@ -1282,19 +1282,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\luish\\.nuget\\packages\\": {}
+    "C:\\Users\\T-Gamer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luish\\Desktop\\Nova pasta\\Sistema-Escolar\\Sistema-Escolar.csproj",
+      "projectUniqueName": "C:\\Users\\T-Gamer\\Desktop\\projeto2\\Sistema-Escolar\\Sistema-Escolar.csproj",
       "projectName": "Sistema-Escolar",
-      "projectPath": "C:\\Users\\luish\\Desktop\\Nova pasta\\Sistema-Escolar\\Sistema-Escolar.csproj",
-      "packagesPath": "C:\\Users\\luish\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luish\\Desktop\\Nova pasta\\Sistema-Escolar\\obj\\",
+      "projectPath": "C:\\Users\\T-Gamer\\Desktop\\projeto2\\Sistema-Escolar\\Sistema-Escolar.csproj",
+      "packagesPath": "C:\\Users\\T-Gamer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\T-Gamer\\Desktop\\projeto2\\Sistema-Escolar\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\luish\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\T-Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1355,7 +1355,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
