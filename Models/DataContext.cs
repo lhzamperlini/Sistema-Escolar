@@ -7,7 +7,7 @@ namespace API.Models
         public DataContext(DbContextOptions<DataContext> options) 
             : base(options) { }
         public DbSet<Aluno> Alunos { get; set; }
-        //public DbSet<>  { get; set; }
+        public DbSet<Professor> Professores { get; set; }
         //public DbSet<>  { get; set; }
     }
 }
