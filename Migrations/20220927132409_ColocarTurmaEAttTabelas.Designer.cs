@@ -3,14 +3,16 @@ using System;
 using API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Sistema_Escolar.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220927132409_ColocarTurmaEAttTabelas")]
+    partial class ColocarTurmaEAttTabelas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -89,12 +91,6 @@ namespace Sistema_Escolar.Migrations
                     b.Property<DateTime>("CriadoEm")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ProfessorCpf")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("ProfessorId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("disciplina")
                         .HasColumnType("TEXT");
 
@@ -106,23 +102,7 @@ namespace Sistema_Escolar.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProfessorId");
-
                     b.ToTable("Turmas");
-                });
-
-            modelBuilder.Entity("API.Models.Turma", b =>
-                {
-                    b.HasOne("API.Models.Professor", "Professor")
-                        .WithMany("turmas")
-                        .HasForeignKey("ProfessorId");
-
-                    b.Navigation("Professor");
-                });
-
-            modelBuilder.Entity("API.Models.Professor", b =>
-                {
-                    b.Navigation("turmas");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,6 +1,6 @@
 using System;
-using System.ComponentModel;
-using Sistema_Escolar.Validations;
+using System.Collections.Generic;
+
 
 namespace API.Models
 {
@@ -17,6 +17,8 @@ namespace API.Models
         public string Email {get; set; }
 
         public string Cpf { get; set; }
+
+        public virtual List<Turma> turmas {get; set;}
         public DateTime CriadoEm { get; set; }
     }
 }

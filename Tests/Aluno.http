@@ -9,6 +9,7 @@ Content-Type: application/json
     "nome" : "NomeTeste",
     "cpf" : "12312312312",
     "email" : "email@teste",
+    "telefone": "123456789",
     "rgm" : "1000",
     "nascimento" : "1900-09-20"
 }

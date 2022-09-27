@@ -8,6 +8,6 @@ namespace API.Models
             : base(options) { }
         public DbSet<Aluno> Alunos { get; set; }
         public DbSet<Professor> Professores { get; set; }
-        //public DbSet<>  { get; set; }
+        public DbSet<Turma>  Turmas { get; set; }
     }
 }
