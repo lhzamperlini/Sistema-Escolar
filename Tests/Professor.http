@@ -1,0 +1,29 @@
+### Listar professores
+GET https://localhost:5001/api/professor/listar
+
+### Cadastrar professor
+POST https://localhost:5001/api/professor/cadastrar
+Content-Type: application/json
+
+{
+    "Nome" : "nomeProfessor",
+    "Telefone" : "12345678",
+    "Email" : "abc@.com",
+    "Cpf" : "12345678911"
+}
+
+### Buscar um professor pelo CPF
+GET https://localhost:5001/api/professor/buscar/1234567891
+
+### Deletar um professor pelo Id
+DELETE https://localhost:5001/api/professor/deletar/1
+
+### Alterar um professor
+PATCH  https://localhost:5001/api/professor/alterar
+Content-Type: application/json
+
+{
+    "id" : 2,
+    "nome" : "nomeAlterado",
+    "cpf" : "12345678999"
+}
