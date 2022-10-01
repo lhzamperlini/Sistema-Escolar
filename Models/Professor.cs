@@ -15,10 +15,10 @@ namespace API.Models
         public string Telefone { get; set; }
 
         public string Email {get; set; }
-
+        
         public string Cpf { get; set; }
-
-        public virtual List<Turma> turmas {get; set;}
         public DateTime CriadoEm { get; set; }
+
+
     }
 }

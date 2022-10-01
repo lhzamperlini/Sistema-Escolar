@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Sistema_Escolar.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220927132409_ColocarTurmaEAttTabelas")]
-    partial class ColocarTurmaEAttTabelas
+    [Migration("20221001043246_MigracaoInicial")]
+    partial class MigracaoInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,6 +53,31 @@ namespace Sistema_Escolar.Migrations
                     b.ToTable("Alunos");
                 });
 
+            modelBuilder.Entity("API.Models.Disciplina", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CpfProfessor")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CriadoEm")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("professorId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("professorId");
+
+                    b.ToTable("Disciplinas");
+                });
+
             modelBuilder.Entity("API.Models.Professor", b =>
                 {
                     b.Property<int>("Id")
@@ -91,18 +116,43 @@ namespace Sistema_Escolar.Migrations
                     b.Property<DateTime>("CriadoEm")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("disciplina")
+                    b.Property<int>("DisciplinaId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("horario")
                         .HasColumnType("TEXT");
 
-                    b.Property<TimeSpan>("horario")
+                    b.Property<string>("periodo")
                         .HasColumnType("TEXT");
 
-                    b.Property<double>("valor")
-                        .HasColumnType("REAL");
+                    b.Property<string>("sala")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("DisciplinaId");
+
                     b.ToTable("Turmas");
+                });
+
+            modelBuilder.Entity("API.Models.Disciplina", b =>
+                {
+                    b.HasOne("API.Models.Professor", "professor")
+                        .WithMany()
+                        .HasForeignKey("professorId");
+
+                    b.Navigation("professor");
+                });
+
+            modelBuilder.Entity("API.Models.Turma", b =>
+                {
+                    b.HasOne("API.Models.Disciplina", "Disciplina")
+                        .WithMany()
+                        .HasForeignKey("DisciplinaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Disciplina");
                 });
 #pragma warning restore 612, 618
         }

@@ -14,15 +14,33 @@ namespace API.Controllers
         public TurmaController(DataContext context) =>
             _context = context;
 
+        //  POST: /api/turma/cadastrar
+        //  [HttpPost]
+        //  [Route("cadastrar")]
+        //  public IActionResult Cadastrar([FromBody] Turma turma)
+        //  {
+        //    Professor professor = _context.Professores.
+        //    FirstOrDefault(a => a.Cpf.Equals(turma.ProfessorCpf));
+        //    if (professor != null)
+        //    {
+        //        turma.Professor = professor;
+        //        _context.Turmas.Add(turma);
+        //        _context.SaveChanges();
+        //       return Created("", turma);
+        //    }
+        //    return NotFound();
+        // }
+
         // POST: /api/turma/cadastrar
         [HttpPost]
         [Route("cadastrar")]
         public IActionResult Cadastrar([FromBody] Turma turma)
         {
-            Professor professor = _context.Professores.
-            FirstOrDefault(a => a.Cpf.Equals(turma.ProfessorCpf));
-            if(professor !=null){
-                turma.Professor = professor;
+            Disciplina discipliana = _context.Disciplinas.
+            FirstOrDefault(a => a.Id == turma.DisciplinaId);
+            if (discipliana != null)
+            {
+                turma.Disciplina = discipliana;
                 _context.Turmas.Add(turma);
                 _context.SaveChanges();
                 return Created("", turma);
@@ -30,11 +48,25 @@ namespace API.Controllers
             return NotFound();
 
         }
+        
 
         // GET: /api/turma/listar
         [HttpGet]
         [Route("listar")]
-        public IActionResult Listar() => Ok(_context.Turmas.ToList());
+        public IActionResult Listar(){
+
+            var turmas = _context.Turmas.ToList();
+
+         for(int i = 0; i < turmas.Count; i++){
+
+         turmas[i].Disciplina = _context.Disciplinas.FirstOrDefault(a => a.Id.Equals(turmas[i].DisciplinaId));//Relacionamento com a tabela Professor
+
+        }
+
+            return Ok(turmas);
+        }
+
+        
        
         // GET: /api/turma/buscar/{cpf}
         [HttpGet]
