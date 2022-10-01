@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Desenvolvimento software visual\\Sistema-Escolar\\Sistema-Escolar.csproj": {}
+    "C:\\Users\\Fabricio two\\source\\repos\\Sistema-Escolar\\Sistema-Escolar.csproj": {}
   },
   "projects": {
-    "E:\\Desenvolvimento software visual\\Sistema-Escolar\\Sistema-Escolar.csproj": {
+    "C:\\Users\\Fabricio two\\source\\repos\\Sistema-Escolar\\Sistema-Escolar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Desenvolvimento software visual\\Sistema-Escolar\\Sistema-Escolar.csproj",
+        "projectUniqueName": "C:\\Users\\Fabricio two\\source\\repos\\Sistema-Escolar\\Sistema-Escolar.csproj",
         "projectName": "Sistema-Escolar",
-        "projectPath": "E:\\Desenvolvimento software visual\\Sistema-Escolar\\Sistema-Escolar.csproj",
-        "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-        "outputPath": "E:\\Desenvolvimento software visual\\Sistema-Escolar\\obj\\",
+        "projectPath": "C:\\Users\\Fabricio two\\source\\repos\\Sistema-Escolar\\Sistema-Escolar.csproj",
+        "packagesPath": "C:\\Users\\Fabricio two\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Fabricio two\\source\\repos\\Sistema-Escolar\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Fabricio two\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -71,10 +65,17 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -83,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
