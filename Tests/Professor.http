@@ -6,6 +6,7 @@ POST https://localhost:5001/api/professor/cadastrar
 Content-Type: application/json
 
 {
+<<<<<<< HEAD
     "Nome" : "nomeProfessor",
     "Telefone" : "12345678",
     "Email" : "abc@.com",
@@ -17,13 +18,32 @@ GET https://localhost:5001/api/professor/buscar/1234567891
 
 ### Deletar um professor pelo Id
 DELETE https://localhost:5001/api/professor/deletar/1
+=======
+    "Nome" : "maRIA",
+    "Cpf" : "88888888",
+    "Email" : "abc@.com",
+    "Telefone" : "12345678333"
+    
+    
+}
+
+### Buscar um professor pelo CPF
+GET https://localhost:5001/api/professor/buscar/12345678999
+
+### Deletar um professor pelo Id
+DELETE https://localhost:5001/api/professor/deletar/36
+>>>>>>> Nova_Branch
 
 ### Alterar um professor
 PATCH  https://localhost:5001/api/professor/alterar
 Content-Type: application/json
 
 {
+<<<<<<< HEAD
     "id" : 2,
+=======
+    "id" : 35,
+>>>>>>> Nova_Branch
     "nome" : "nomeAlterado",
     "cpf" : "12345678999"
 }

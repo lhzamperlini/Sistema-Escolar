@@ -29,9 +29,14 @@ namespace API.Models
             ErrorMessage = "E-mail inválido!"
         )]
         public string Email { get; set; }
+        public string telefone {get; set;}
 
         public DateTime Nascimento { get; set; }
 
         public DateTime CriadoEm { get; set; }
+
+        public int CodigoTurma{get; set;} //Código da turma
+
+
     }
 }

@@ -3,14 +3,16 @@ using System;
 using API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Sistema_Escolar.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20221002012740_novamigration")]
+    partial class novamigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,8 +56,6 @@ namespace Sistema_Escolar.Migrations
                     b.ToTable("Alunos");
                 });
 
-<<<<<<< HEAD
-=======
             modelBuilder.Entity("API.Models.AlunoDisciplina", b =>
                 {
                     b.Property<int>("Id")
@@ -112,7 +112,6 @@ namespace Sistema_Escolar.Migrations
                     b.ToTable("Disciplinas");
                 });
 
->>>>>>> Nova_Branch
             modelBuilder.Entity("API.Models.Professor", b =>
                 {
                     b.Property<int>("Id")
@@ -138,8 +137,6 @@ namespace Sistema_Escolar.Migrations
 
                     b.ToTable("Professores");
                 });
-<<<<<<< HEAD
-=======
 
             modelBuilder.Entity("API.Models.Turma", b =>
                 {
@@ -201,7 +198,6 @@ namespace Sistema_Escolar.Migrations
 
                     b.Navigation("Disciplina");
                 });
->>>>>>> Nova_Branch
 #pragma warning restore 612, 618
         }
     }

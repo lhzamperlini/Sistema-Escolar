@@ -1,3 +1,4 @@
+using System.Reflection.Metadata;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,8 +33,8 @@ namespace Sistema_Escolar
             (
                 options => options.UseSqlite("DataSource=escola.db;Cache=shared")
             );    
-
-
+            services.AddControllers().AddJsonOptions(x=> x.JsonSerializerOptions
+            .ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve);
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

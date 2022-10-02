@@ -1,6 +1,11 @@
 using System;
+<<<<<<< HEAD
 using System.ComponentModel;
 using Sistema_Escolar.Validations;
+=======
+using System.Collections.Generic;
+
+>>>>>>> Nova_Branch
 
 namespace API.Models
 {
@@ -9,6 +14,7 @@ namespace API.Models
         public Professor () => CriadoEm = DateTime.Now;
 
         public int Id { get; set; }
+<<<<<<< HEAD
 
         public string Nome { get; set; }
 
@@ -18,5 +24,14 @@ namespace API.Models
 
         public string Cpf { get; set; }
         public DateTime CriadoEm { get; set; }
+=======
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public string Email {get; set; }
+        public string Telefone { get; set; }
+        public DateTime CriadoEm { get; set; }
+
+
+>>>>>>> Nova_Branch
     }
 }

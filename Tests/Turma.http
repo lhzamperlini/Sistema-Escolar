@@ -1,0 +1,33 @@
+### Listar Turmas
+GET https://localhost:5001/api/turma/listar
+
+### Cadastrar Turma
+POST https://localhost:5001/api/turma/cadastrar
+Content-Type: application/json
+
+{
+    "CodigoTurma" : 12,
+    "DisciplinaId": "10",
+    "periodo" : "Manhã",
+    "horario" : "08:00h às 12:00h",
+    "sala": "404"
+}
+
+### Buscar uma turma pelo CodigoTurma
+GET https://localhost:5001/api/turma/buscar/12
+
+### Deletar uma turma pelo Id
+DELETE https://localhost:5001/api/turma/deletar/18
+
+### Alterar uma turma pelo Id
+PATCH  https://localhost:5001/api/turma/alterar
+Content-Type: application/json
+
+{
+    "Id" : 9,
+    "CodigoTurma" : 222,
+    "DisciplinaId": "13",
+    "periodo" : "Manhã",
+    "horario" : "08:00h às 12:00h",
+    "sala": "504"
+}
