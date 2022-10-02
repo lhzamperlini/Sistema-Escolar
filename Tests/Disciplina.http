@@ -8,13 +8,14 @@ GET https://localhost:5001/api/disciplina/listar
 
 
 
-### Cadastrar disciplina
+### Cadastrar disciplina [ disciplina só é cadastrada  
+###  se tiver um professor com cpf ja cadastrado no banco ] 
 POST https://localhost:5001/api/disciplina/cadastrar
 Content-Type: application/json
 
 {
     "Nome": "Matemática",
-    "CpfProfessor": "12345678911"
+    "CpfProfessor": "88888888"
     
 }
 
@@ -23,18 +24,18 @@ PATCH https://localhost:5001/api/disciplina/alterar
 Content-Type: application/json
 
 {
-    "id" : 13,
+    "id" : 5,
     "nome": "Portugues",
     "CpfProfessor": "88888888"
     
 }
 
 ### Deletar disciplina
-DELETE https://localhost:5001/api/disciplina/deletar/11
+DELETE https://localhost:5001/api/disciplina/deletar/1
 
 
 
-### Limpar todas as tabelas do banco de dados
+### LIMPAR TODAS AS TABELAS EXISTENTES NO BANCO
 DELETE https://localhost:5001/api/disciplina/deletarall
 
 

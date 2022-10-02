@@ -76,8 +76,26 @@ namespace API.Controllers
 
             }
         }
+        
 
+        ////busca todas as disciplinas do aluno pelo cpf
+        public List<Disciplina> Buscar(string cpfAluno){
 
+            
+            var aluno = _context.Alunos.FirstOrDefault(a => a.Cpf == cpfAluno); //busca um aluno pelo cpf
+
+            var turmas = _context.Turmas.ToList().Where(a => a.CodigoTurma == aluno.CodigoTurma); //busca todas as turmas do aluno
+          
+            List<Disciplina> disciplinasAluno = new List<Disciplina>(); //lista de disciplinas do aluno
+               
+
+           for(int i =0; i < turmas.Count(); i++){
+
+            disciplinasAluno.Add(_context.Disciplinas.FirstOrDefault(a => a.Id == turmas.ElementAt(i).DisciplinaId)); //adiciona a disciplina da turma atual na lista de disciplinas do aluno
+           }
+
+            return disciplinasAluno;
+        }
 
 
        
@@ -149,24 +167,7 @@ namespace API.Controllers
 
 
 
-        ////busca todas as disciplinas do aluno pelo cpf
-        public List<Disciplina> Buscar(string cpfAluno){
-
-            
-            var aluno = _context.Alunos.FirstOrDefault(a => a.Cpf == cpfAluno); //busca um aluno pelo cpf
-
-            var turmas = _context.Turmas.ToList().Where(a => a.CodigoTurma == aluno.CodigoTurma); //busca todas as turmas do aluno
-          
-            List<Disciplina> disciplinasAluno = new List<Disciplina>(); //lista de disciplinas do aluno
-               
-
-           for(int i =0; i < turmas.Count(); i++){
-
-            disciplinasAluno.Add(_context.Disciplinas.FirstOrDefault(a => a.Id == turmas.ElementAt(i).DisciplinaId)); //adiciona a disciplina da turma atual na lista de disciplinas do aluno
-           }
-
-            return disciplinasAluno;
-        }
+        
 
 
     }

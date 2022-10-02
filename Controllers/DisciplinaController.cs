@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using API.Models;
@@ -98,8 +99,19 @@ namespace API.Controllers
         [Route("alterar")]
         public IActionResult Alterar([FromBody] Disciplina disciplina)
         {
+
+             try{
+
             _context.Disciplinas.Update(disciplina); //altera o objeto no banco de dados
             _context.SaveChanges(); //salva as alterações no banco de dados
+
+
+             }catch(Exception){
+
+                 return BadRequest("Erro ao alterar disciplina, ID ou CPF inválido");
+             }
+
+            
             return Ok(disciplina);
         }
 

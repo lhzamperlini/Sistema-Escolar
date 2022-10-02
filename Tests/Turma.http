@@ -6,7 +6,7 @@ POST https://localhost:5001/api/turma/cadastrar
 Content-Type: application/json
 
 {
-    "CodigoTurma" : 12,
+    "CodigoTurma" : 17,
     "DisciplinaId": "10",
     "periodo" : "Manhã",
     "horario" : "08:00h às 12:00h",
@@ -17,16 +17,18 @@ Content-Type: application/json
 GET https://localhost:5001/api/turma/buscar/12
 
 ### Deletar uma turma pelo Id
-DELETE https://localhost:5001/api/turma/deletar/18
+DELETE https://localhost:5001/api/turma/deletar/5
 
+
+### [A turma só é atualizada se existe uma disciplina com o Id informado no banco]
 ### Alterar uma turma pelo Id
 PATCH  https://localhost:5001/api/turma/alterar
 Content-Type: application/json
 
 {
-    "Id" : 9,
+    "Id" : 2,
     "CodigoTurma" : 222,
-    "DisciplinaId": "13",
+    "DisciplinaId": "5",
     "periodo" : "Manhã",
     "horario" : "08:00h às 12:00h",
     "sala": "504"
