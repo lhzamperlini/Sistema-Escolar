@@ -9,16 +9,12 @@ namespace API.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string CpfProfessor { get; set; }
-        public Professor professor { get; set; }
+        public string Nomeprofessor { get; set; }
         public DateTime CriadoEm { get; set; }
        
 
 
-        public Disciplina(Professor professor, string CpfProfessor)
-        {
-            this.professor = professor;
-            this.CpfProfessor = CpfProfessor;
-        }
+        
        
 
 

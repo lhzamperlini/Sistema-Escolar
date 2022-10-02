@@ -17,7 +17,7 @@ namespace API.Models
         public string horario {get; set;} //horario da aula
         public string sala {get; set;}
         public DateTime CriadoEm { get; set; }
-    
+
         
     }
 }

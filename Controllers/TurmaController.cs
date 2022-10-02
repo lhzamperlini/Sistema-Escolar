@@ -38,9 +38,12 @@ namespace API.Controllers
         {
             Disciplina discipliana = _context.Disciplinas.
             FirstOrDefault(a => a.Id == turma.DisciplinaId);
+
             if (discipliana != null)
             {
                 turma.Disciplina = discipliana;
+                turma.DisciplinaId = discipliana.Id;
+
                 _context.Turmas.Add(turma);
                 _context.SaveChanges();
                 return Created("", turma);
@@ -56,10 +59,13 @@ namespace API.Controllers
         public IActionResult Listar(){
 
             var turmas = _context.Turmas.ToList();
-
+  
+         //para mostrar a disciplina junto e o profesor que esta junto com disciplina
          for(int i = 0; i < turmas.Count; i++){
 
-         turmas[i].Disciplina = _context.Disciplinas.FirstOrDefault(a => a.Id.Equals(turmas[i].DisciplinaId));//Relacionamento com a tabela Professor
+         turmas[i].Disciplina = _context.Disciplinas.FirstOrDefault(a => a.Id.Equals(turmas[i].DisciplinaId));
+         turmas[i].Disciplina.Nomeprofessor = _context.Professores.FirstOrDefault(a => a.Cpf.Equals(turmas[i].Disciplina.CpfProfessor)).Nome;
+         turmas[i].Disciplina.CpfProfessor = _context.Professores.FirstOrDefault(a => a.Cpf.Equals(turmas[i].Disciplina.CpfProfessor)).Cpf;
 
         }
 
@@ -73,8 +79,23 @@ namespace API.Controllers
         [Route("buscar/{CodigoTurma}")]
         public IActionResult Buscar([FromRoute] int CodigoTurma)
         {
+
             Turma turma = _context.Turmas.
                 FirstOrDefault(a => a.CodigoTurma.Equals(CodigoTurma));
+
+           try{
+
+             turma.Disciplina = _context.Disciplinas.FirstOrDefault(a => a.Id.Equals(turma.DisciplinaId));
+             turma.Disciplina.Nomeprofessor = _context.Professores.FirstOrDefault(a => a.Cpf.Equals(turma.Disciplina.CpfProfessor)).Nome;
+             turma.Disciplina.CpfProfessor = _context.Professores.FirstOrDefault(a => a.Cpf.Equals(turma.Disciplina.CpfProfessor)).Cpf;
+
+           }catch(Exception ){
+
+
+               return NotFound("CODIGO TURMA NAO ENCONTRADO");
+
+           }   
+
             return turma != null ? Ok(turma) : NotFound();
         }
 

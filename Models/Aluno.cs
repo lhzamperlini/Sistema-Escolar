@@ -34,5 +34,9 @@ namespace API.Models
         public DateTime Nascimento { get; set; }
 
         public DateTime CriadoEm { get; set; }
+
+        public int CodigoTurma{get; set;} //Código da turma
+
+
     }
 }

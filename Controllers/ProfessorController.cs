@@ -28,15 +28,15 @@ namespace API.Controllers
         // GET: /api/professor/listar
         [HttpGet]
         [Route("listar")]
-        public IActionResult Listar() => Ok(_context.Professores.ToList());
+        public IActionResult Listar() => Ok( _context.Professores.ToList());
        
         // GET: /api/professor/buscar/{cpf}
         [HttpGet]
         [Route("buscar/{cpf}")]
         public IActionResult Buscar([FromRoute] string cpf)
         {
-            Professor professor = _context.Professores.
-                FirstOrDefault(a => a.Cpf.Equals(cpf));
+            Professor professor = _context.Professores.FirstOrDefault(a => a.Cpf.Equals(cpf));
+
             return professor != null ? Ok(professor) : NotFound();
         }
 

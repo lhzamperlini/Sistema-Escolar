@@ -1,0 +1,41 @@
+
+
+### Listar disciplinas
+GET https://localhost:5001/api/disciplina/listar
+
+### Listar disciplinas por aluno
+//GET https://localhost:5001/api/disciplina/buscar/2
+
+
+
+### Cadastrar disciplina
+POST https://localhost:5001/api/disciplina/cadastrar
+Content-Type: application/json
+
+{
+    "Nome": "Matemática",
+    "CpfProfessor": "12345678911"
+    
+}
+
+### Atualizar disciplina
+PATCH https://localhost:5001/api/disciplina/alterar
+Content-Type: application/json
+
+{
+    "id" : 13,
+    "nome": "Portugues",
+    "CpfProfessor": "88888888"
+    
+}
+
+### Deletar disciplina
+DELETE https://localhost:5001/api/disciplina/deletar/11
+
+
+
+### Limpar todas as tabelas do banco de dados
+DELETE https://localhost:5001/api/disciplina/deletarall
+
+
+
