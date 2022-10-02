@@ -7,13 +7,9 @@ namespace API.Models
     {
         public DataContext(DbContextOptions<DataContext> options) 
             : base(options) { }
-<<<<<<< HEAD
         public DbSet<Aluno> Alunos { get; set; }
         public DbSet<Professor> Professores { get; set; }
         //public DbSet<>  { get; set; }
-=======
-        public DbSet<Aluno> Alunos { get; set;} 
-        public DbSet<Professor> Professores { get; set;}
         public DbSet<Turma> Turmas { get; set;}
         public DbSet<Disciplina> Disciplinas { get; set;}
         public DbSet<AlunoDisciplina> AlunoDisciplinas { get; set;} //Tabela de relacionamento
@@ -29,6 +25,6 @@ namespace API.Models
         }
 
 
->>>>>>> Nova_Branch
+
     }
 }

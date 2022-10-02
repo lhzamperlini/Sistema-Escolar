@@ -1386,45 +1386,20 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\Aluno\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
-=======
     "C:\\Users\\Fabricio two\\.nuget\\packages\\": {}
->>>>>>> Nova_Branch
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "E:\\Desenvolvimento software visual\\Sistema-Escolar\\Sistema-Escolar.csproj",
-      "projectName": "Sistema-Escolar",
-      "projectPath": "E:\\Desenvolvimento software visual\\Sistema-Escolar\\Sistema-Escolar.csproj",
-      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "E:\\Desenvolvimento software visual\\Sistema-Escolar\\obj\\",
-=======
       "projectUniqueName": "C:\\Users\\Fabricio two\\source\\repos\\Sistema-Escolar\\Sistema-Escolar.csproj",
       "projectName": "Sistema-Escolar",
       "projectPath": "C:\\Users\\Fabricio two\\source\\repos\\Sistema-Escolar\\Sistema-Escolar.csproj",
       "packagesPath": "C:\\Users\\Fabricio two\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Fabricio two\\source\\repos\\Sistema-Escolar\\obj\\",
->>>>>>> Nova_Branch
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-=======
         "C:\\Users\\Fabricio two\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> Nova_Branch
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1493,12 +1468,16 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
-=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
->>>>>>> Nova_Branch
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\Fabricio two\\source\\repos\\Sistema-Escolar\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -54,8 +54,6 @@ namespace Sistema_Escolar.Migrations
                     b.ToTable("Alunos");
                 });
 
-<<<<<<< HEAD
-=======
             modelBuilder.Entity("API.Models.AlunoDisciplina", b =>
                 {
                     b.Property<int>("Id")
@@ -112,7 +110,6 @@ namespace Sistema_Escolar.Migrations
                     b.ToTable("Disciplinas");
                 });
 
->>>>>>> Nova_Branch
             modelBuilder.Entity("API.Models.Professor", b =>
                 {
                     b.Property<int>("Id")
@@ -138,8 +135,6 @@ namespace Sistema_Escolar.Migrations
 
                     b.ToTable("Professores");
                 });
-<<<<<<< HEAD
-=======
 
             modelBuilder.Entity("API.Models.Turma", b =>
                 {
@@ -201,7 +196,6 @@ namespace Sistema_Escolar.Migrations
 
                     b.Navigation("Disciplina");
                 });
->>>>>>> Nova_Branch
 #pragma warning restore 612, 618
         }
     }

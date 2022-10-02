@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Sistema_Escolar.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221001043246_MigracaoInicial")]
+    [Migration("20221002040901_MigracaoInicial")]
     partial class MigracaoInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,6 +22,9 @@ namespace Sistema_Escolar.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CodigoTurma")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Cpf")
@@ -53,6 +56,39 @@ namespace Sistema_Escolar.Migrations
                     b.ToTable("Alunos");
                 });
 
+            modelBuilder.Entity("API.Models.AlunoDisciplina", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("AlunoId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("DisciplinaId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("MediaNota")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("cpfAluno")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("nota1")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("nota2")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlunoId");
+
+                    b.HasIndex("DisciplinaId");
+
+                    b.ToTable("AlunoDisciplinas");
+                });
+
             modelBuilder.Entity("API.Models.Disciplina", b =>
                 {
                     b.Property<int>("Id")
@@ -68,12 +104,10 @@ namespace Sistema_Escolar.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("professorId")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Nomeprofessor")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("professorId");
 
                     b.ToTable("Disciplinas");
                 });
@@ -135,13 +169,23 @@ namespace Sistema_Escolar.Migrations
                     b.ToTable("Turmas");
                 });
 
-            modelBuilder.Entity("API.Models.Disciplina", b =>
+            modelBuilder.Entity("API.Models.AlunoDisciplina", b =>
                 {
-                    b.HasOne("API.Models.Professor", "professor")
+                    b.HasOne("API.Models.Aluno", "Aluno")
                         .WithMany()
-                        .HasForeignKey("professorId");
+                        .HasForeignKey("AlunoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("professor");
+                    b.HasOne("API.Models.Disciplina", "Disciplina")
+                        .WithMany()
+                        .HasForeignKey("DisciplinaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Aluno");
+
+                    b.Navigation("Disciplina");
                 });
 
             modelBuilder.Entity("API.Models.Turma", b =>
