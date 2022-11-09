@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-title>Deletar Professor</mat-card-title>
+    <form>
+
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="professor?.nome" name="name" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="CPF" [value]="professor?.cpf" name="cpf" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Email" [value]="professor?.email" name="email" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Phone" [value]="professor?.telefone" name="phone" disabled>
+        </mat-form-field>
+    </form>
+</mat-card>
+
+
+<button mat-raised-button (click)="deleteProfessor()" color="warn">
+    Deletar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>

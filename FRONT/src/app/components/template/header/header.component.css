@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header .logo {
+    max-width: 32px;
+}
+
+.header .title-gruop {
+    padding-left: 25px;
+}
+
+.header .title-gruop i {
+    padding-right: 5px;
+}
