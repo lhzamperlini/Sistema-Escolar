@@ -35,6 +35,7 @@ import { TurmaCreateComponent } from './components/turma/turma-create/turma-crea
 import { TurmaReadComponent } from './components/turma/turma-read/turma-read.component';
 import { TurmaUpdateComponent } from './components/turma/turma-update/turma-update.component';
 import { TurmaDeleteComponent } from './components/turma/turma-delete/turma-delete.component';
+import { TurmaCrudComponent } from './views/turma-crud/turma-crud.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { TurmaDeleteComponent } from './components/turma/turma-delete/turma-dele
     TurmaCreateComponent,
     TurmaReadComponent,
     TurmaUpdateComponent,
-    TurmaDeleteComponent
+    TurmaDeleteComponent,
+    TurmaCrudComponent
   ],
   imports: [
     BrowserModule,

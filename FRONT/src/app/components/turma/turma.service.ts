@@ -38,4 +38,12 @@ export class TurmaService {
         );
       }
 
+      read(): Observable<Turma[]> {
+        const url = `${this.baseUrl}/listar`
+        return this.http.get<Turma[]>(url).pipe(
+          map(obj => obj),
+          catchError(e => this.ErrorHandler(e))
+        );
+      }
+
 }
