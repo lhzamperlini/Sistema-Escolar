@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>Nova Turma</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Codigo da Turma" [(ngModel)]="codigoTurma" name="codigoTurma">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="CPF do Professor" [(ngModel)]="ProfessorCpf" name="ProfessorCpf">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Disciplina" [(ngModel)]="disciplina" name="disciplina">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input [(ngModel)]="horario" name="horario" matInput type="datetime-local" placeholder="start date">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Valor" [(ngModel)]="valor" name="valor">
+        </mat-form-field>
+    </form>
+</mat-card>
+
+
+<button mat-raised-button (click)="criarTurma()" color="primary">
+    Salvar
+</button>
+
+<button mat-raised-button >
+    Cancelar
+</button>

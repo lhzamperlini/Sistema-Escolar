@@ -13,7 +13,7 @@ namespace API.Models
         public string ProfessorCpf{get;set;}
         public virtual Professor Professor { get; set; }
         public string disciplina {get; set;}
-        public TimeSpan horario {get; set;}
+        public DateTime horario {get; set;}
         public double valor{get; set;}
         public DateTime CriadoEm { get; set; }
     }

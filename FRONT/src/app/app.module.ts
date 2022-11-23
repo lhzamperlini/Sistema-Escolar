@@ -31,6 +31,10 @@ import { MatInputModule }from '@angular/material/input';
 import { ProfessorReadComponent } from './components/professor/professor-read/professor-read.component';
 import { ProfessorUpdateComponent } from './components/professor/professor-update/professor-update.component';
 import { ProfessorDeleteComponent } from './components/professor/professor-delete/professor-delete.component';
+import { TurmaCreateComponent } from './components/turma/turma-create/turma-create.component';
+import { TurmaReadComponent } from './components/turma/turma-read/turma-read.component';
+import { TurmaUpdateComponent } from './components/turma/turma-update/turma-update.component';
+import { TurmaDeleteComponent } from './components/turma/turma-delete/turma-delete.component';
 
 
 @NgModule({
@@ -45,7 +49,12 @@ import { ProfessorDeleteComponent } from './components/professor/professor-delet
     ProfessorReadComponent,
     //ProfessorRead2Component,
     ProfessorUpdateComponent,
-    ProfessorDeleteComponent
+    ProfessorDeleteComponent,
+    TurmaReadComponent,
+    TurmaCreateComponent,
+    TurmaReadComponent,
+    TurmaUpdateComponent,
+    TurmaDeleteComponent
   ],
   imports: [
     BrowserModule,

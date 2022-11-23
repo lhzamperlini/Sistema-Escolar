@@ -1,6 +1,7 @@
 import { ProfessorDeleteComponent } from './components/professor/professor-delete/professor-delete.component';
 import { ProfessorUpdateComponent } from './components/professor/professor-update/professor-update.component';
 import { ProfessorCreateComponent } from './components/professor/professor-create/professor-create.component';
+import { TurmaCreateComponent } from './components/turma/turma-create/turma-create.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: "professores/delete/:id",
     component: ProfessorDeleteComponent
+  },
+  {
+    path: "turmas/criar",
+    component: TurmaCreateComponent
   }
 ];
 
