@@ -54,6 +54,14 @@ export class TurmaService {
         );
       }
 
+      update(turma: Turma): Observable<Turma> {
+        const url = `${this.baseUrl}/alterar`
+        return this.http.patch<Turma>(url, turma).pipe(
+          map(obj => obj),
+          catchError(e => this.ErrorHandler(e))
+        );
+      }
+
       delete(id: number): Observable<Turma> {
         const url = `${this.baseUrl}/deletar/${id}`;
         return this.http.delete<Turma>(url).pipe(

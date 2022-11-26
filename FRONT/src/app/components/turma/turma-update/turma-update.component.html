@@ -1,1 +1,34 @@
-<p>turma-update works!</p>
+<mat-card>
+    <mat-card-title>Alterar Professor</mat-card-title>
+    <form *ngIf="turma">
+
+        <mat-form-field>
+            <input matInput placeholder="Codigo da Turma" [(ngModel)]="turma.codigoTurma" name="codigoTurma">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Disciplina" [(ngModel)]="turma.disciplina" name="disciplina">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Horario" [(ngModel)]="turma.horario" name="horario">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cpf do Professor" [(ngModel)]="turma.professorCpf" name="professorCpf">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Valor" [(ngModel)]="turma.valor" name="valor">
+        </mat-form-field>
+    </form>
+</mat-card>
+
+
+<button mat-raised-button (click)="updateTurma()" color="primary">
+    Salvar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>

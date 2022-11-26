@@ -21,7 +21,6 @@ export class TurmaDeleteComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id')!
     this.turmaService.readById(id).subscribe(turma => {
       this.turma = turma
-      console.log(turma)
     })
   }
 
