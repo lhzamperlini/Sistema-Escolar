@@ -9,6 +9,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { ProfessorCrudComponent } from './views/professor-crud/professor-crud.component';
 import { TurmaCrudComponent } from './views/turma-crud/turma-crud.component';
+import { TurmaDeleteComponent } from './components/turma/turma-delete/turma-delete.component';
+import { TurmaUpdateComponent } from './components/turma/turma-update/turma-update.component';
 
 const routes: Routes = [
   {
@@ -38,11 +40,19 @@ const routes: Routes = [
   {
     path: "turmas/criar",
     component: TurmaCreateComponent
+  },
+  {
+    path: "turmas/editar/:id",
+    component: TurmaUpdateComponent
+  },
+  {
+    path: "turmas/deletar/:id",
+    component: TurmaDeleteComponent
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+exports: [RouterModule]
 })
 export class AppRoutingModule { }

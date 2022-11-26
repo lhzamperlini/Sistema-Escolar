@@ -1,1 +1,34 @@
-<p>turma-delete works!</p>
+<mat-card>
+    <mat-card-title>Deletar Professor</mat-card-title>
+    <form>
+
+        <mat-form-field>
+            <input matInput placeholder="Codigo Turma" [value]="turma?.codigoTurma" name="codigoTurma" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="CPF do Professor" [value]="turma?.professorCpf" name="professorCpf" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Disciplina" [value]="turma?.disciplina" name="disciplina" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Horario" [value]="turma?.horario" name="horario" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Valor" [value]="turma?.valor" name="valor" disabled>
+        </mat-form-field>
+    </form>
+</mat-card>
+
+
+<button mat-raised-button (click)="deleteTurma()" color="warn">
+    Deletar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>

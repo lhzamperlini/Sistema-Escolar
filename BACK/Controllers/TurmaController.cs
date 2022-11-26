@@ -45,13 +45,13 @@ namespace API.Controllers
             return Ok(turmas);
         } 
        
-        // GET: /api/turma/buscar/{cpf}
+        // GET: /api/turma/buscar/{CodigoTurma}
         [HttpGet]
-        [Route("buscar/{CodigoTurma}")]
-        public IActionResult Buscar([FromRoute] int CodigoTurma)
+        [Route("buscar/{id}")]
+        public IActionResult Buscar([FromRoute] int id)
         {
             Turma turma = _context.Turmas.
-                FirstOrDefault(a => a.CodigoTurma.Equals(CodigoTurma));
+                FirstOrDefault(a => a.Id.Equals(id));
             return turma != null ? Ok(turma) : NotFound();
         }
 

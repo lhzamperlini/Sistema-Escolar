@@ -11,7 +11,7 @@ import { TurmaService } from './../turma.service';
 export class TurmaCreateComponent implements OnInit {
 
     codigoTurma!: number
-    ProfessorCpf!: string
+    professorCpf!: string
     disciplina!: string
     horario!: Date
     valor!: number
@@ -26,7 +26,7 @@ export class TurmaCreateComponent implements OnInit {
     console.log(this.horario)
     let turma: Turma = {
       codigoTurma: this.codigoTurma,
-      ProfessorCpf:  this.ProfessorCpf,
+      professorCpf:  this.professorCpf,
       disciplina: this.disciplina,
       horario: this.horario,
       valor: this.valor

@@ -11,7 +11,7 @@ import { TurmaService } from './../turma.service';
 export class TurmaReadComponent implements OnInit {
 
   turmas!: Turma[]
-  displayedColumns = ['id', 'codigoTurma', 'professorCpf', 'disciplina', 'horario', 'valor' ,'action']
+  displayedColumns = ['id', 'codigoTurma', 'professor', 'disciplina', 'horario', 'valor' ,'action']
 
   constructor(private turmaService: TurmaService) { }
 

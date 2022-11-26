@@ -46,4 +46,20 @@ export class TurmaService {
         );
       }
 
+      readById(id: string): Observable<Turma> {
+        const url = `${this.baseUrl}/buscar/${id}`
+        return this.http.get<Turma>(url).pipe(
+          map(obj => obj),
+          catchError(e => this.ErrorHandler(e))
+        );
+      }
+
+      delete(id: number): Observable<Turma> {
+        const url = `${this.baseUrl}/deletar/${id}`;
+        return this.http.delete<Turma>(url).pipe(
+          map(obj => obj),
+          catchError(e => this.ErrorHandler(e))
+        );
+      }
+
 }

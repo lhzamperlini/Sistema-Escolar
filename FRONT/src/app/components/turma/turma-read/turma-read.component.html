@@ -12,9 +12,9 @@
         <td mat-cell *matCellDef="let row">{{row.codigoTurma}}</td>
       </ng-container>
   
-      <ng-container matColumnDef="professorCpf">
-        <th mat-header-cell *matHeaderCellDef>Cpf do Professor</th>
-        <td mat-cell *matCellDef="let row">{{row.professorCpf}}</td>
+      <ng-container matColumnDef="professor">
+        <th mat-header-cell *matHeaderCellDef>Professor</th>
+        <td mat-cell *matCellDef="let row">{{row.professor.nome}}</td>
       </ng-container>
   
       <ng-container matColumnDef="disciplina">
@@ -35,12 +35,12 @@
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef>Ações</th>
         <td mat-cell *matCellDef="let row">
-          <a routerLink="/professores/update/{{ row.id }}" class="edit">
+          <a routerLink="/turmas/editar/{{ row.id }}" class="edit">
             <i class="material-icons">
               edit
             </i>
           </a>
-          <a routerLink="/professores/delete/{{ row.id }}" class="delete">
+          <a routerLink="/turmas/deletar/{{ row.id }}" class="delete">
             <i class="material-icons">
               delete
             </i>
