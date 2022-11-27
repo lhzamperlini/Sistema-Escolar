@@ -9,5 +9,6 @@ namespace API.Models
         public DbSet<Aluno> Alunos { get; set; }
         public DbSet<Professor> Professores { get; set; }
         public DbSet<Turma>  Turmas { get; set; }
+        public DbSet<Boletim> Boletins {get; set;}
     }
 }
