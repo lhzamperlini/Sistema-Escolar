@@ -1,3 +1,5 @@
+using System.Net;
+using System.Net.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,13 +24,17 @@ namespace API.Controllers
         {
             Professor professor = _context.Professores.
             FirstOrDefault(a => a.Cpf.Equals(turma.ProfessorCpf));
-            if(professor !=null){
-                turma.Professor = professor;
-                _context.Turmas.Add(turma);
-                _context.SaveChanges();
-                return Created("", turma);
+            Turma turmaExistente = _context.Turmas.FirstOrDefault(a => a.CodigoTurma == turma.CodigoTurma);
+            if(turmaExistente == null){
+                if(professor !=null){
+                    turma.Professor = professor;
+                    _context.Turmas.Add(turma);
+                    _context.SaveChanges();
+                    return Created("", turma);
+                }
+                return NotFound("Nenhum professor cadastrado no sistema com esse Cpf");
             }
-            return NotFound();
+            return BadRequest("Uma turma com esse mesmo código já está cadastrada, por favor coloque outro codigo");
 
         }
 
@@ -57,10 +63,10 @@ namespace API.Controllers
 
         // DELETE: /api/turma/deletar/{id}
         [HttpDelete]
-        [Route("deletar/{IdTurma}")]
-        public IActionResult Deletar([FromRoute] int IdTurma)
+        [Route("deletar/{id}")]
+        public IActionResult Deletar([FromRoute] int id)
         {
-            Turma turma = _context.Turmas.Find(IdTurma);
+            Turma turma = _context.Turmas.Find(id);
             if (turma != null)
             {
                 _context.Turmas.Remove(turma);

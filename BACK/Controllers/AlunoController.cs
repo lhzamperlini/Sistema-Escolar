@@ -23,8 +23,7 @@ namespace API.Controllers
         [Route("cadastrar")]
         public IActionResult Cadastrar([FromBody] Aluno aluno)
         {
-
-            aluno.Media = (aluno.NotaUm + aluno.NotaDois + aluno.Nota3Tres) / 3;  
+            aluno.Media = (aluno.NotaUm + aluno.NotaDois + aluno.NotaTres) / 3;  
             _context.Alunos.Add(aluno);
             _context.SaveChanges();
             return Created("", aluno);

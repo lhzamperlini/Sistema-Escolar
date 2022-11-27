@@ -31,7 +31,6 @@ export class TurmaCreateComponent implements OnInit {
       horario: this.horario,
       valor: this.valor
     }
-    console.log(turma)
     this.turmaService.create(turma).subscribe(() => {
       this.turmaService.showMessage('Turma criada!')
       this.router.navigate(['/turmas'])

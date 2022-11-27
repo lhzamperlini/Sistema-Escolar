@@ -18,6 +18,13 @@ export class TurmaService {
 
         ErrorHandler(error : HttpErrorResponse) : Observable<any> {
             this.showMessage(`Ocorreu um erro! ${error.message}`, true)
+            console.log(error)
+            return EMPTY
+          }
+
+          CreateErrorHandler(error : HttpErrorResponse) : Observable<any> {
+            this.showMessage(`${error.error}`, true)
+            console.log(error)
             return EMPTY
           }
     
@@ -34,7 +41,7 @@ export class TurmaService {
         const url = `${this.baseUrl}/cadastrar`
         return this.http.post<Turma>(url, turma).pipe(
           map(obj => obj),
-          catchError(e => this.ErrorHandler(e))
+          catchError(e => this.CreateErrorHandler(e))
         );
       }
 

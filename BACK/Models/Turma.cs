@@ -11,10 +11,11 @@ namespace API.Models
         public int Id { get; set; }
         public int CodigoTurma{get; set;}
         public string ProfessorCpf{get;set;}
-        public virtual Professor Professor { get; set; }
+        public Professor Professor { get; set; }
         public string disciplina {get; set;}
         public DateTime horario {get; set;}
         public double valor{get; set;}
         public DateTime CriadoEm { get; set; }
+        
     }
 }

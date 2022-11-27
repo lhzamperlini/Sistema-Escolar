@@ -67,7 +67,7 @@ namespace API.Controllers
             return boletim != null ? Ok(boletim) : NotFound();
         }
 
-        // DELETE: /api/aluno/deletar/{id}
+        // DELETE: /api/boletim/deletar/{id}
         [HttpDelete]
         [Route("deletar/{id}")]
         public IActionResult Deletar([FromRoute] int id)

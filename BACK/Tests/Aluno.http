@@ -11,21 +11,24 @@ Content-Type: application/json
     "email" : "email@teste",
     "telefone": "123456789",
     "rgm" : "1000",
-    "nascimento" : "1900-09-20"
+    "nascimento" : "1900-09-20",
+    "notaUm": 40.0,
+    "notaDois": 80.0,
+    "notaTres": 50.0
 }
 
 ### Buscar um aluno pelo CPF
-GET https://localhost:5001/api/aluno/buscar/1234567891
+GET https://localhost:5001/api/aluno/buscar/12312312312
 
 ### Deletar um aluno pelo Id
-DELETE https://localhost:5001/api/aluno/deletar/1
+DELETE https://localhost:5001/api/aluno/deletar/3
 
 ### Alterar um aluno
 PATCH  https://localhost:5001/api/aluno/alterar
 Content-Type: application/json
 
 {
-    "id" : 2,
+    "id" : 1,
     "nome" : "NomeAlteradoTeste",
     "cpf" : "12345678911"
 }
