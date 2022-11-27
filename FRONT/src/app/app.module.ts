@@ -43,6 +43,7 @@ import { AlunoReadComponent } from "./components/aluno/aluno-read/aluno-read.com
 import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-update.component';
 
 
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -66,7 +67,7 @@ import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-upda
         AlunoDeleteComponent,
         AlunoCrudComponent,
         AlunoReadComponent,
-        AlunoUpdateComponent
+        AlunoUpdateComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],

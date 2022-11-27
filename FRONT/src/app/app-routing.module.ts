@@ -24,19 +24,19 @@ const routes: Routes = [
     component: AlunoCrudComponent
   },
   {
-    path: "alunos",
+    path: "alunos/create",
     component: AlunoCreateComponent
   },
   {
-    path: "alunos",
+    path: "alunos/update/:id",
     component: AlunoUpdateComponent
   },
   {
-    path: "alunos",
+    path: "alunos/read",
     component: AlunoReadComponent
   },
   {
-    path: "alunos",
+    path: "alunos/delete/:id",
     component: AlunoDeleteComponent
   },
   {
