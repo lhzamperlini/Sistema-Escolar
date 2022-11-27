@@ -39,7 +39,7 @@ namespace API.Models
 
         public double NotaDois { get; set;}
 
-        public double Nota3Tres { get; set;}
+        public double NotaTres { get; set;}
 
         public double Media { get; set;}
     }

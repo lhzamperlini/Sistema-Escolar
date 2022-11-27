@@ -24,7 +24,7 @@ namespace API.Controllers
         public IActionResult Cadastrar([FromBody] Aluno aluno)
         {
 
-            aluno.Media = (aluno.NotaUm + aluno.NotaDois + aluno.Nota3Tres) / 3;  
+            aluno.Media = (aluno.NotaUm + aluno.NotaDois + aluno.NotaTres) / 3;  
             _context.Alunos.Add(aluno);
             _context.SaveChanges();
             return Created("", aluno);
@@ -37,6 +37,15 @@ namespace API.Controllers
         {
             Aluno aluno = _context.Alunos.
                 FirstOrDefault(a => a.Cpf.Equals(cpf));
+            return aluno != null ? Ok(aluno) : NotFound();
+        }
+
+        [HttpGet]
+        [Route("buscarid/{id}")]
+        public IActionResult BuscarId([FromRoute] int id)
+        {
+            Aluno aluno = _context.Alunos.
+                FirstOrDefault(a => a.Id.Equals(id));
             return aluno != null ? Ok(aluno) : NotFound();
         }
 
