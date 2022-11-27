@@ -1,0 +1,54 @@
+<mat-card>
+    <mat-card-title>Alterar Aluno</mat-card-title>
+    <form *ngIf="aluno">
+
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="aluno.nome" name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="CPF" [(ngModel)]="aluno.cpf" name="cpf">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="RGM" [(ngModel)]="aluno.rgm" name="rgm">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="E-mail" [(ngModel)]="aluno.email" name="email">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Telefone" [(ngModel)]="aluno.telefone" name="telefone">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Nascimento" [(ngModel)]="aluno.nascimento" name="nascimento">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Nota Um" [(ngModel)]="aluno.notaUm" name="notaUm">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Nota Dois" [(ngModel)]="aluno.notaDois" name="notaDois">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Nota Tres" [(ngModel)]="aluno.notaTres" name="notaTres">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Media" [(ngModel)]="aluno.media" name="media">
+        </mat-form-field>
+
+    </form>
+</mat-card>
+
+<button mat-raised-button (click)="updateAluno()" color="primary">
+    Salvar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>

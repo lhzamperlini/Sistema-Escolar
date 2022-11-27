@@ -1,0 +1,52 @@
+<mat-card>
+    <mat-card-title>Novo Aluno</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="nome" name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="CPF" [(ngModel)]="cpf" name="cpf">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="RGM" [(ngModel)]="rgm" name="rgm">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="E-mail" [(ngModel)]="email" name="email">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Telefone" [(ngModel)]="telefone" name="telefone">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Nascimento" [(ngModel)]="nascimento" name="nascimento">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Nota Um" [(ngModel)]="notaUm" name="notaUm">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Nota Dois" [(ngModel)]="notaDois" name="notaDois">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Nota Tres" [(ngModel)]="notaTres" name="notaTres">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Media" [(ngModel)]="media" name="media">
+        </mat-form-field>
+    </form>
+</mat-card>
+
+<button mat-raised-button (click)="createAluno()" color="primary">
+    Salvar
+</button>
+
+ <button mat-raised-button >
+    Cancelar
+</button>  
