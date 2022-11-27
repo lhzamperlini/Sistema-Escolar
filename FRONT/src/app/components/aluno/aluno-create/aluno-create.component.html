@@ -2,43 +2,45 @@
     <mat-card-title>Novo Aluno</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="aluno.nome" name="nome">
+            <input matInput placeholder="Nome" [(ngModel)]="nome" name="nome">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="CPF" [(ngModel)]="aluno.cpf" name="cpf">
+            <input matInput placeholder="CPF" [(ngModel)]="cpf" name="cpf">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="RGM" [(ngModel)]="aluno.rgm" name="rgm">
+            <input matInput placeholder="RGM" [(ngModel)]="rgm" name="rgm">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="E-mail" [(ngModel)]="aluno.email" name="email">
+            <input matInput placeholder="E-mail" [(ngModel)]="email" name="email">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Telefone" [(ngModel)]="aluno.telefone" name="telefone">
+            <input matInput placeholder="Telefone" [(ngModel)]="telefone" name="telefone">
         </mat-form-field>
 
-        <mat-form-field>
-            <input matInput placeholder="Nascimento" [(ngModel)]="aluno.nascimento" name="nascimento">
+        <mat-form-field class="input" id="nascimento">
+            <mat-label for="nascimento">Nascimento</mat-label>
+            <input matInput type="date" name="nascimento" [(ngModel)]="nascimento">
+            <mat-hint>dd/mm/yyyy</mat-hint>
         </mat-form-field>
         
         <mat-form-field>
-            <input matInput placeholder="Nota Um" [(ngModel)]="aluno.notaUm" name="notaUm">
+            <input matInput placeholder="Nota Um" [(ngModel)]="notaUm" name="notaUm">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Nota Dois" [(ngModel)]="aluno.notaDois" name="notaDois">
+            <input matInput placeholder="Nota Dois" [(ngModel)]="notaDois" name="notaDois">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Nota Tres" [(ngModel)]="aluno.notaTres" name="notaTres">
+            <input matInput placeholder="Nota Tres" [(ngModel)]="notaTres" name="notaTres">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Media" [(ngModel)]="aluno.media" name="media">
+            <input matInput placeholder="Media" [(ngModel)]="media" name="media">
         </mat-form-field>
     </form>
 </mat-card>

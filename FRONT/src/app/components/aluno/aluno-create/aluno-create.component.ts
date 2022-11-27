@@ -21,8 +21,6 @@ export class AlunoCreateComponent implements OnInit {
     notaTres!: number
     media!: number
 
-// aluno: any;
-
     constructor(private alunoService: AlunoService,
       private router: Router) { }
     
