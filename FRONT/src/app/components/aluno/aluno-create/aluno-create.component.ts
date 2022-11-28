@@ -16,10 +16,6 @@ export class AlunoCreateComponent implements OnInit {
     email!: string
     telefone!: string
     nascimento!: string
-    notaUm!: number
-    notaDois!: number
-    notaTres!: number
-    media!: number
 
     constructor(private alunoService: AlunoService,
       private router: Router) { }
@@ -34,11 +30,7 @@ export class AlunoCreateComponent implements OnInit {
       rgm: this.rgm,
       email: this.email,
       telefone: this.telefone,
-      nascimento: this.nascimento,
-      notaUm: this.notaUm,
-      notaDois: this.notaDois,
-      notaTres: this.notaTres,
-      media: this.media
+      nascimento: this.nascimento
     }
     this.alunoService.create(aluno).subscribe(() => {
       this.alunoService.showMessage('Aluno criado!')

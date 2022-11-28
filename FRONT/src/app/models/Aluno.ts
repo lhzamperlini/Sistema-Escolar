@@ -6,8 +6,4 @@ export interface Aluno{
     email: string;
     telefone: string;
     nascimento: string;
-    notaUm: number;
-    notaDois: number;
-    notaTres: number;
-    media: number;
   }
