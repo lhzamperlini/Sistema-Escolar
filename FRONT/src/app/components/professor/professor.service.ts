@@ -68,8 +68,7 @@ export class ProfessorService {
 
   ErrorHandler(error : HttpErrorResponse) : Observable<any> {
     if (error.status == 400) {
-      this.showMessage(`${error.error.errors.Nome}`, true)
-      this.showMessage(`${error.error.errors.Cpf}`, true)
+      this.showMessage(`${error.error}`, true)
       console.log(error)
     } else if(error.status == 0) {
       this.showMessage('A API utilizada na aplicação aparenta não estar recebendo resquisiçoes', true)

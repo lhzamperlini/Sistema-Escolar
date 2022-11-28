@@ -1,3 +1,4 @@
+import { Professor } from './../components/professor/professor.model';
 export interface Turma {
     id?: number
     codigoTurma: number
@@ -5,4 +6,6 @@ export interface Turma {
     disciplina: string
     horario: Date
     valor: number
+    professorId: string
+    prefessor?: Professor
 }

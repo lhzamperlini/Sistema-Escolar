@@ -5,9 +5,9 @@
             <input matInput placeholder="Codigo da Turma" [(ngModel)]="codigoTurma" name="codigoTurma">
         </mat-form-field>
 
-        <mat-form-field>
+        <!-- <mat-form-field>
             <input matInput placeholder="CPF do Professor" [(ngModel)]="professorCpf" name="ProfessorCpf">
-        </mat-form-field>
+        </mat-form-field> -->
 
         <mat-form-field>
             <input matInput placeholder="Disciplina" [(ngModel)]="disciplina" name="disciplina">
@@ -20,6 +20,15 @@
         <mat-form-field>
             <input matInput placeholder="Valor" [(ngModel)]="valor" name="valor">
         </mat-form-field>
+
+        <mat-form-field id="professores" class="input">
+            <mat-label for="selProfessores">Professores</mat-label>
+            <mat-select [(ngModel)]="professorCpf" name="professorCpf">
+              <mat-option *ngFor="let professor of professores" value="{{ professor.cpf }}">
+                {{ professor.nome }} tem CPF: {{ professor.cpf }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
     </form>
 </mat-card>
 

@@ -40,7 +40,7 @@ export class TurmaService {
       create(turma: Turma): Observable<Turma> {
         const url = `${this.baseUrl}/cadastrar`
         return this.http.post<Turma>(url, turma).pipe(
-          map(obj => obj),
+          map(obj => obj), 
           catchError(e => this.CreateErrorHandler(e))
         );
       }

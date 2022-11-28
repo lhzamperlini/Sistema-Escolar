@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
@@ -87,6 +88,7 @@ import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-upda
         MatTableModule,
         MatPaginatorModule,
         MatSortModule,
+        MatSelectModule
     ]
 })
 export class AppModule { }
