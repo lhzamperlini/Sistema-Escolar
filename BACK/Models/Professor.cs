@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Sistema_Escolar.Validations;
 
 namespace API.Models
 {
@@ -18,6 +19,12 @@ namespace API.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "O campo CPF é obrigatório!")]
+        [StringLength(
+            11,
+            MinimumLength = 11,
+            ErrorMessage = "O campo CPF deve conter 11 caracteres!"
+        )]
+         [CpfEmUso]
         public string Cpf { get; set; }
 
         public DateTime CriadoEm { get; set; }
