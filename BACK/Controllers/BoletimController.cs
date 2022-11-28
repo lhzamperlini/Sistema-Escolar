@@ -19,11 +19,12 @@ namespace API.Controllers
         [Route("cadastrar")]
         public IActionResult Cadastrar([FromBody] Boletim boletim)
         {
+            boletim.Media = (boletim.NotaUm + boletim.NotaDois + boletim.NotaTres) / 3;  
             Aluno aluno = _context.Alunos.
             FirstOrDefault(a => a.Cpf.Equals(boletim.AlunoCpf));
             Turma turma = _context.Turmas.FirstOrDefault(a => a.CodigoTurma == boletim.CodigoTurma);
             if(aluno !=null && turma != null){
-                if( aluno.Media > 60)
+                if( boletim.Media > 60)
                 {
                     boletim.Status = "Aprovado";
                 }
@@ -87,6 +88,7 @@ namespace API.Controllers
         [Route("alterar")]
         public IActionResult Alterar([FromBody] Boletim boletim)
         {
+            boletim.Media = (boletim.NotaUm + boletim.NotaDois + boletim.NotaTres) / 3;  
             try
             {
                 _context.Boletins.Update(boletim);
