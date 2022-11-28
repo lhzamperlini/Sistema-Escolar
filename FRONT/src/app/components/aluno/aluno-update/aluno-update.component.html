@@ -22,8 +22,10 @@
             <input matInput placeholder="Telefone" [(ngModel)]="aluno.telefone" name="telefone">
         </mat-form-field>
 
-        <mat-form-field>
-            <input matInput placeholder="Nascimento" [(ngModel)]="aluno.nascimento" name="nascimento">
+        <mat-form-field class="input" id="nascimento">
+            <mat-label for="nascimento">Nascimento</mat-label>
+            <input matInput type="date" name="nascimento" [(ngModel)]="aluno.nascimento">
+            <mat-hint>dd/mm/yyyy</mat-hint>
         </mat-form-field>
 
         <mat-form-field>

@@ -47,6 +47,10 @@ export class AlunoCreateComponent implements OnInit {
  
   }
 
+  cancel(): void {
+    this.router.navigate(['/alunos'])
+  }
+
 }
 
 

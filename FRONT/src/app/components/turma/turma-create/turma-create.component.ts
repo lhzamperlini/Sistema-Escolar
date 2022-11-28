@@ -37,4 +37,8 @@ export class TurmaCreateComponent implements OnInit {
     })
   }
 
+  cancel(): void {
+    this.router.navigate(['/turmas'])
+  }
+
 }

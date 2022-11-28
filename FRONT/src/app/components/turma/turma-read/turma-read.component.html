@@ -24,7 +24,7 @@
   
       <ng-container matColumnDef="horario">
         <th mat-header-cell *matHeaderCellDef>Horário</th>
-        <td mat-cell *matCellDef="let row">{{row.horario}}</td>
+        <td mat-cell *matCellDef="let row">{{row.horario | date: 'dd/MM/yyy HH:mm:ss'}}</td>
       </ng-container>
 
       <ng-container matColumnDef="valor">

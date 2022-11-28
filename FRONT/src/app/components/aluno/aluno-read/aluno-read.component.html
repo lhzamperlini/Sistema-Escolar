@@ -34,7 +34,7 @@
 
        <ng-container matColumnDef="nascimento">
       <th mat-header-cell *matHeaderCellDef>Nascimento</th>
-        <td mat-cell *matCellDef="let row">{{row.nascimento}}</td>
+        <td mat-cell *matCellDef="let row">{{row.nascimento | date: 'dd/MM/yyy'}}</td>
       </ng-container>
 
       <ng-container matColumnDef="notaUm">
