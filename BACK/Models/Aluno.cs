@@ -9,11 +9,8 @@ namespace API.Models
     {
         public Aluno () => CriadoEm = DateTime.Now;
         public int Id { get; set; }
-
         [Required(ErrorMessage = "O campo nome é obrigatório!")]
         public string Nome { get; set; }
-
-        
         [Required(ErrorMessage = "O campo CPF é obrigatório!")]
         [StringLength(
             11,
@@ -22,25 +19,14 @@ namespace API.Models
         )]
         // [CpfEmUso]
         public string Cpf { get; set; }
-
         public string Rgm { get; set; }
-
         [EmailAddress(
             ErrorMessage = "E-mail inválido!"
         )]
         public string Email { get; set; }
         public string telefone {get; set;}
-
         public DateTime Nascimento { get; set; }
-
         public DateTime CriadoEm { get; set; }
 
-        public double NotaUm { get; set;}
-
-        public double NotaDois { get; set;}
-
-        public double NotaTres { get; set;}
-
-        public double Media { get; set;}
     }
 }

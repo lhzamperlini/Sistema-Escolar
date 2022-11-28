@@ -3,28 +3,35 @@ POST https://localhost:5001/api/boletim/cadastrar
 Content-Type: application/json
 
 {
-    "CodigoTurma" : 22,
-    "AlunoCpf" : "12312312312"
+    "codigoTurma": 12,
+    "AlunoCpf" : "12312312312",
+    "notaUm": 30.0,
+    "notaDois": 20,
+    "notaTres": 7.9
 }
 
 ### Listar os Boletins
 GET https://localhost:5001/api/boletim/listar
 
 ### Listar boletins por codigo da turma
-GET https://localhost:5001/api/boletim/buscar/22
+GET https://localhost:5001/api/boletim/buscar/12
 
 ### Buscar um boletim pelo id
-GET https://localhost:5001/api/boletim/buscar-id/6
+GET https://localhost:5001/api/boletim/buscar-id/2
 
 ### Deletar um boletim pelo Id
-DELETE https://localhost:5001/api/boletim/deletar/6
+DELETE https://localhost:5001/api/boletim/deletar/1
 
 ### Alterar um boletim
 PATCH  https://localhost:5001/api/boletim/alterar
 Content-Type: application/json
 
 {
-    "id" : 5,
+    "id" : 2,
     "AlunoCpf" : "12312312312",
-    "status" : "Aprovado"
+    "status" : "Aprovado",
+    "codigoTurma": 12,
+    "notaUm": 50.0,
+    "notaDois": 80.2,
+    "notaTres": 74.9
 }

@@ -6,26 +6,26 @@ POST https://localhost:5001/api/turma/cadastrar
 Content-Type: application/json
 
 {
-    "CodigoTurma" : 29,
-    "ProfessorCpf": "12345678911",
+    "CodigoTurma" : 12,
+    "ProfessorCpf": "11111111111",
     "disciplina" : "Desenvolvimento Web",
     "valor": 290.00
 }
 
 ### Buscar uma turma pelo ID
-GET https://localhost:5001/api/turma/buscar/5
+GET https://localhost:5001/api/turma/buscar/1
 
 ### Deletar uma turma pelo Id
-DELETE https://localhost:5001/api/turma/deletar/5
+DELETE https://localhost:5001/api/turma/deletar/3
 
 ### Alterar uma turma
 PATCH  https://localhost:5001/api/turma/alterar
 Content-Type: application/json
 
 {
-    "Id" : 7,
+    "Id" : 1,
     "CodigoTurma" : 12,
-    "ProfessorCpf": "025222000",
+    "ProfessorCpf": "12345678911",
     "disciplina" : "Desenvolvimento Web",
     "valor": 290.00
 }

@@ -6,10 +6,10 @@ POST https://localhost:5001/api/professor/cadastrar
 Content-Type: application/json
 
 {
-    "Nome" : "nomeProfessor",
+    "Nome" : "NOMEtESTE",
     "Telefone" : "12345678",
     "Email" : "abc@.com",
-    "Cpf" : "12345678911"
+    "Cpf" : "12345678912"
 }
 
 ### Buscar um professor pelo CPF

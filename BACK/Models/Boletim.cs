@@ -13,7 +13,11 @@ namespace API.Models
         public string Status {get; set;}
         public int CodigoTurma{get; set;}
         public string AlunoCpf {get; set;}
+        public double NotaUm { get; set;}
+        public double NotaDois { get; set;}
+        public double NotaTres { get; set;}
+        public double Media { get; set;}
         public DateTime CriadoEm { get; set; }
-    
+
     }
 }

@@ -6,15 +6,12 @@ POST https://localhost:5001/api/aluno/cadastrar
 Content-Type: application/json
 
 {
-    "nome" : "NomeTeste",
+    "nome" : "Teste",
     "cpf" : "12312312312",
     "email" : "email@teste",
     "telefone": "123456789",
     "rgm" : "1000",
-    "nascimento" : "1900-09-20",
-    "notaUm": 40.0,
-    "notaDois": 80.0,
-    "notaTres": 50.0
+    "nascimento" : "1900-09-20"
 }
 
 ### Buscar um aluno pelo CPF
