@@ -14,16 +14,16 @@ namespace Sistema_Escolar.Validations
             DataContext context =
                 (DataContext)validationContext.GetService(typeof(DataContext));
 
-            Aluno aluno = context.Alunos.FirstOrDefault
+            Professor professor = context.Professores.FirstOrDefault
                 (a => a.Cpf.Equals(cpf));
                 
-            if (aluno == null)
+            if (professor == null)
             {
                 //sucesso
                 return ValidationResult.Success;
             }
             //erro
-            return new ValidationResult("O CPF do aluno já está em uso!");
+            return new ValidationResult("O CPF do Professor já está em uso!");
         }
     }
 }
