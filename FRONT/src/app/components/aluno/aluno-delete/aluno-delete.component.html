@@ -1,0 +1,55 @@
+<mat-card>
+    <mat-card-title>Deletar Aluno</mat-card-title>
+    <form>
+
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="aluno?.nome" name="name" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="CPF" [value]="aluno?.cpf" name="cpf" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="RGM" [value]="aluno?.rgm" name="rgm" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="E-mail" [value]="aluno?.email" name="email" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Telefone" [value]="aluno?.telefone" name="telefone" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Nascimento" [value]="aluno?.nascimento" name="nascimento" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Nota Um" [value]="aluno?.notaUm" name="notaUm" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Nota Dois" [value]="aluno?.notaDois" name="notaDois" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Nota Tres" [value]="aluno?.notaTres" name="notaTres" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Media" [value]="aluno?.media" name="media" disabled>
+        </mat-form-field>
+
+    </form>
+</mat-card>
+
+
+<button mat-raised-button (click)="deleteAluno()" color="warn">
+    Deletar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>

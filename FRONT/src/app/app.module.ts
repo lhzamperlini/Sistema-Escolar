@@ -35,46 +35,58 @@ import { TurmaReadComponent } from './components/turma/turma-read/turma-read.com
 import { TurmaUpdateComponent } from './components/turma/turma-update/turma-update.component';
 import { TurmaDeleteComponent } from './components/turma/turma-delete/turma-delete.component';
 import { TurmaCrudComponent } from './views/turma-crud/turma-crud.component';
+import { AlunoCreateComponent } from './components/aluno/aluno-create/aluno-create.component';
+import { AlunoDeleteComponent } from './components/aluno/aluno-delete/aluno-delete.component';
+import { AlunoCrudComponent } from './views/aluno-crud/aluno-crud.component';
+import { AlunoReadComponent } from "./components/aluno/aluno-read/aluno-read.component"; 
+import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-update.component';
+
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    NavComponent,
-    HomeComponent,
-    ProfessorCrudComponent,
-    ProfessorCreateComponent,
-    ProfessorReadComponent,
-    ProfessorUpdateComponent,
-    ProfessorDeleteComponent,
-    TurmaReadComponent,
-    TurmaCreateComponent,
-    TurmaReadComponent,
-    TurmaUpdateComponent,
-    TurmaDeleteComponent,
-    TurmaCrudComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
-    MatCardModule,
-    MatButtonModule,
-    MatSnackBarModule,
-    HttpClientModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        NavComponent,
+        HomeComponent,
+        ProfessorCrudComponent,
+        ProfessorCreateComponent,
+        ProfessorReadComponent,
+        //ProfessorRead2Component,
+        ProfessorUpdateComponent,
+        ProfessorDeleteComponent,
+        TurmaReadComponent,
+        TurmaCreateComponent,
+        TurmaReadComponent,
+        TurmaUpdateComponent,
+        TurmaDeleteComponent,
+        TurmaCrudComponent,
+        AlunoCreateComponent,
+        AlunoDeleteComponent,
+        AlunoCrudComponent,
+        AlunoReadComponent,
+        AlunoUpdateComponent,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatListModule,
+        MatCardModule,
+        MatButtonModule,
+        MatSnackBarModule,
+        HttpClientModule,
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+    ]
 })
 export class AppModule { }
