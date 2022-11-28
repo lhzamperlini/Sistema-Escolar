@@ -2,7 +2,7 @@
 
 namespace Sistema_Escolar.Migrations
 {
-    public partial class MigrationIssueMerge2 : Migration
+    public partial class Fixx : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

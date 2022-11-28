@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Sistema_Escolar.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221127211026_FuncaoId")]
-    partial class FuncaoId
+    [Migration("20221128115307_Fixx")]
+    partial class Fixx
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -63,6 +63,39 @@ namespace Sistema_Escolar.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Alunos");
+                });
+
+            modelBuilder.Entity("API.Models.Boletim", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("AlunoCpf")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("AlunoId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CodigoTurma")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CriadoEm")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("TurmaId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlunoId");
+
+                    b.HasIndex("TurmaId");
+
+                    b.ToTable("Boletins");
                 });
 
             modelBuilder.Entity("API.Models.Professor", b =>
@@ -125,6 +158,21 @@ namespace Sistema_Escolar.Migrations
                     b.HasIndex("ProfessorId");
 
                     b.ToTable("Turmas");
+                });
+
+            modelBuilder.Entity("API.Models.Boletim", b =>
+                {
+                    b.HasOne("API.Models.Aluno", "Aluno")
+                        .WithMany()
+                        .HasForeignKey("AlunoId");
+
+                    b.HasOne("API.Models.Turma", "Turma")
+                        .WithMany()
+                        .HasForeignKey("TurmaId");
+
+                    b.Navigation("Aluno");
+
+                    b.Navigation("Turma");
                 });
 
             modelBuilder.Entity("API.Models.Turma", b =>
