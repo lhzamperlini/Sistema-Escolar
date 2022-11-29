@@ -1,0 +1,55 @@
+<mat-card>
+    <mat-card-title> Novo Boletim </mat-card-title>
+
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nota Um" [(ngModel)]="notaUm" name="notaUm">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Nota Dois" [(ngModel)]="notaDois" name="notaDois">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Nota Tres" [(ngModel)]="notaTres" name="notaTres">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Media" [(ngModel)]="media" name="media">
+        </mat-form-field>
+
+        <!-- <mat-form-field>
+            <input matInput placeholder="Aluno CPF" [(ngModel)]="alunoCpf" name="alunoCpf">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Codigo da Turma do Aluno" [(ngModel)]="codigoTurma" name="codigoTurma">
+        </mat-form-field> -->
+
+        <mat-form-field id="alunos" class="input">
+            <mat-label for="selAlunos">Alunos</mat-label>
+            <mat-select [(ngModel)]="alunoCpf" name="alunoCpf">
+              <mat-option *ngFor="let aluno of alunos" value="{{ aluno.cpf }}">
+                {{ aluno.nome }} tem CPF: {{ aluno.cpf }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field id="turmas" class="input">
+            <mat-label for="selTurmas">Codigo da Turma</mat-label>
+            <mat-select [(ngModel)]="codigoTurma" name="codigoTurma">
+              <mat-option *ngFor="let turma of turmas" value="{{ turma.codigoTurma }}">
+                {{ turma.codigoTurma }} 
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+    </form>
+
+    <button mat-raised-button (click)="createBoletim()" color="primary">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="cancel()"> 
+        Cancelar
+    </button>
+</mat-card>

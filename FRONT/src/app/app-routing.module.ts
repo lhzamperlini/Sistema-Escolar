@@ -15,6 +15,9 @@ import { AlunoDeleteComponent } from './components/aluno/aluno-delete/aluno-dele
 import { AlunoCreateComponent } from './components/aluno/aluno-create/aluno-create.component';
 import { TurmaDeleteComponent } from './components/turma/turma-delete/turma-delete.component';
 import { TurmaUpdateComponent } from './components/turma/turma-update/turma-update.component';
+import { BoletimCrudComponent } from './views/boletim-crud/boletim-crud.component';
+import { BoletimCreateComponent } from './components/boletim/boletim-create/boletim-create.component';
+
 
 const routes: Routes = [
   {
@@ -72,7 +75,16 @@ const routes: Routes = [
   {
     path: "turmas/deletar/:id",
     component: TurmaDeleteComponent
-  }
+  },
+  {
+    path: "boletins",
+    component: BoletimCrudComponent
+  },
+  {
+    path: "boletins/create",
+    component: BoletimCreateComponent
+  },
+    
 ];
 
 @NgModule({

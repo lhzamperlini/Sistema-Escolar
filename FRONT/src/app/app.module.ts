@@ -41,6 +41,9 @@ import { AlunoDeleteComponent } from './components/aluno/aluno-delete/aluno-dele
 import { AlunoCrudComponent } from './views/aluno-crud/aluno-crud.component';
 import { AlunoReadComponent } from "./components/aluno/aluno-read/aluno-read.component"; 
 import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-update.component';
+import { BoletimCreateComponent } from './components/boletim/boletim-create/boletim-create.component';
+import { BoletimCrudComponent } from './views/boletim-crud/boletim-crud.component';
+import { BoletimReadComponent } from './components/boletim/boletim-read/boletim-read.component';
 
 
 
@@ -68,6 +71,9 @@ import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-upda
         AlunoCrudComponent,
         AlunoReadComponent,
         AlunoUpdateComponent,
+        BoletimCreateComponent,
+        BoletimCrudComponent,
+        BoletimReadComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
